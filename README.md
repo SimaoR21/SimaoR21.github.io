@@ -51,20 +51,20 @@ git commit -m "Part1 is finished"
 5. At this point (and probably during its development), **push** into the GitHub repository
 
 ```sh
-git push origin part1
+git push origin Part1
 ```
 
 6. Repeat the process for the next parts. **create a  branch** Part2 as new branch of Part1.
 
 ```sh
-git checkout -b part2 part1
+git checkout -b Part2 Part1
 ```
 
 [**alternative to  6**) you may alternatively **merge Part1 branch with main branch** and **branch Part2** from the main branch.``
 
 ```sh
 git checkout main
-git merge part1
+git merge Part1
 # resolve any conflicts
 git push origin main
 git checkout -b Part2
