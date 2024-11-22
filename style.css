@@ -1,65 +1,137 @@
 /* Basic reset */
+
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    font-family: sans-serif;
-    font-size: 12px;
+    font-family: Arial, sans-serif;
+    font-size: 14px;
 }
 
-/* Container styling */
-form {
-    max-width: 600px;
-    margin: 1em auto;
+/* General layout */
+body {
+    background-color: #e5f3fb;
     padding: 1em;
-    /* ... */
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+header {
+    text-align: center;
+    font-size: 1.5em;
+    font-weight: bold;
+    margin-bottom: 1em;
+    color: #0056a3;
+}
+
+/* Form container */
+form {
+    max-width: 700px;
+    margin: 2em auto;
+    padding: 1.5em;
+    border-radius: 10px;
+    background-color: #c5deff;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.15);
 }
 
 /* Fieldset styling */
 fieldset {
-    /* ... */
+    background-color: #daecff;
+    border-radius: 8px;
+    padding: 20px;
+    margin-bottom: 20px;
     border: 1px solid #ccc;
     position: relative;
 }
 
-/* Legend styling */
 legend {
-     /* ... */
+    background-color: #ff6347;
+    color: white;
     border: 1px solid green;
+    border-radius: 20px;
+    text-align: center;
+    padding: 0.3em 0.5em;
+    font-weight: bold;
 }
 
-/* Label and input styling */
+/* Label styling */
 label {
     display: block;
-    /* ... */
+    margin-bottom: 0.5em;
+    font-weight: bold;
+    color: #333;
 }
 
+/* Input and select styling */
 input[type="text"],
 input[type="email"],
 input[type="password"],
+input[type="month"],
 textarea,
-select{
-    /* ... */
-    border: 1px solid #ccc;
+select {
+    display: block;
+    width: 100%;
+    padding: 0.8em;
+    margin-bottom: 1em;
+    border: 1px solid #aaa;
+    border-radius: 5px;
+    font-size: 1em;
+    background-color: #fdfdfd;
+    margin-left: 1em;
+    width: calc(100% - 2em);
+    padding-right: 1em;
 }
 
-/* Checkbox styling */
-input[type="checkbox"] {
-    margin-right: 1em;
+input[type="text"]:focus,
+input[type="email"]:focus,
+input[type="password"]:focus,
+textarea:focus,
+select:focus {
+    border-color: #0056a3;
+    outline: none;
 }
 
-/* Button styling */
-button[type="submit"],
-input[type="submit"] {
-    /* ... */
-    background-color: #007BFF;
-
+/* Radio group styling */
+.radio-group {
+    display: flex;
+    gap: 1em;
+    margin-bottom: 1em;
 }
 
-button[type="submit"]:hover,
-input[type="submit"]:hover {
-    background-color: #0056b3;
+.radio-group input[type="radio"] {
+    margin-right: 0.5em;
+    accent-color: #0056a3;
+}
+
+/* Terms styling */
+.terms {
+    margin-top: 1em;
+}
+
+/* Submit button styling */
+button[type="submit"] {
+    display: block;
+    width: 100%;
+    padding: 1em;
+    font-size: 1.1em;
+    font-weight: bold;
+    color: white;
+    background-color: #007bff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-top: 1em;
+    transition: background-color 0.3s ease;
+}
+
+button[type="submit"]:hover {
+    background-color: #003d73;
+}
+
+/* Footer styling */
+footer {
+    text-align: center;
+    margin-top: 2em;
+    color: #555;
+    font-size: 0.9em;
 }
 
 /* Responsive adjustments */
@@ -68,9 +140,8 @@ input[type="submit"]:hover {
         padding: 1em;
     }
 
-    button[type="submit"],
-    input[type="submit"] {
-        font-size: 1.2em;
+    button[type="submit"] {
+        font-size: 1em;
     }
 }
 
