@@ -11,16 +11,77 @@
 <header>Using CSS to style an HTML Form</header>
 <article>
 <div>
-  <form id="myform" action="">
-    <!-- TODO TODO TODO -->
+  <form id="myform" action="#">
+    <!-- Personal Information Section -->
+    <fieldset>
+      <legend>Personal Information</legend>
+      <label for="title">Title</label>
+      <select id="title" name="title">
+        <option value="Mr.">Mr.</option>
+        <option value="Ms.">Ms.</option>
+        <option value="Mrs.">Mrs.</option>
+      </select>
+          <label for="firstname">First name</label>
+          <input type="text" id="firstname" name="firstname" placeholder="Your first name here" required>
+          <label for="lastname">Last name</label>
+          <input type="text" id="lastname" name="lastname" placeholder="Your last name here" required>
+      <label for="email">Email</label>
+      <input type="email" id="email" name="email" placeholder="youremail@server.com" required>
+    </fieldset>
 
-    <!-- List of Countries -->
-    <select id="loc" name="country1">
-    </select>
+    <!-- Address Section -->
+    <fieldset>
+      <legend>Address</legend>
+      <label for="street">Street</label>
+      <input type="text" id="street" name="street" placeholder="Street, number, apartment" required>
+          <label for="city">City</label>
+          <input type="text" id="city" name="city" placeholder="City" required>
+          <label for="state">State/Region</label>
+          <input type="text" id="state" name="state" placeholder="State" required>
+          <label for="postalcode">Postal Code</label>
+          <input type="text" id="postalcode" name="postalcode" placeholder="Postcode" required>
+          <label for="loc">Country</label>
+          <select id="loc" name="country1">
+            <option value="Afghanistan">Afghanistan</option>
+            <option value="USA">USA</option>
+            <option value="India">India</option>
+            <!-- Additional options from 'loadloc.js' can be added dynamically -->
+          </select>
+    </fieldset>
 
+    <!-- Payment Details Section -->
+    <fieldset>
+      <legend>Payment Details</legend>
+      <label>Credit Card</label>
+        <input type="radio" id="amex" name="cardtype" value="American Express">
+        <label for="amex">American Express</label>
+        <input type="radio" id="mastercard" name="cardtype" value="Mastercard">
+        <label for="mastercard">Mastercard</label>
+        <input type="radio" id="visa" name="cardtype" value="Visa">
+        <label for="visa">Visa</label>
+        <input type="radio" id="sascard" name="cardtype" value="SAS Card">
+        <label for="sascard">SAS Card</label>
+        <label for="cardnumber">Card number</label>
+        <input type="text" id="cardnumber" name="cardnumber" placeholder="Card number" required>
+        <label for="expiry">Expiry date</label>
+        <input type="text" id="expiry" name="expiry" placeholder="MM/YY" required>
+        <label for="cvv">CVV</label>
+        <input type="password" id="cvv" name="cvv" placeholder="XXX" required>
+    </fieldset>
+
+    <!-- Terms and Conditions -->
+    <fieldset>
+      <legend>Terms and Conditions</legend>
+      <input type="checkbox" id="terms" name="terms" required>
+      <label for="terms">I agree to the terms and conditions</label>
+      <button type="submit">Submit my details</button>
+    </fieldset>
+
+    
   </form>
 </div>
 </article>
-<footer>pedromoreira 2024</footer>
+<footer>Simão Rodrigues 2024</footer>
+
 </body>
 </html>
